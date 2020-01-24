@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Infinity Gauntlet Timer</title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./dust.css">
   <script
   src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
   integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
@@ -13,6 +15,7 @@
 </head>
 <body id="b1">
 <!-- partial:index.partial.html -->
+<div class="content">
 
     <div id="event">
       <img src="https://fontmeme.com/permalink/200124/9339e4fe46c7c72ae8c5b388ee6d2f8f.png" class="text-center">
@@ -32,7 +35,7 @@
       </div>
       
 
-
+    </div>
 <!-- partial -->
   <script  src="./script.js"></script>
   <script>
@@ -53,12 +56,13 @@ run(10000, 10); //milliseconds, frames
   </script>
   <script>
     $("#time").hide();
+    
   </script>
 
 <!-- timer -->
 <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("Jan 25, 2020 00:00:00").getTime();
+    var countDownDate = new Date("Jan 24, 2020 20:12:00").getTime();
     
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -83,9 +87,19 @@ run(10000, 10); //milliseconds, frames
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";
+
+        var snap = $("#snap");
+        animateScript(snap.click())
       }
     }, 1000);
     </script>
+    
+
+<script src='https://html2canvas.hertzen.com/dist/html2canvas.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/chance/1.0.18/chance.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script  src="./dust.js"></script>
 
 </body>
 </html>
